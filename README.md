@@ -52,6 +52,8 @@ Methods:
 
 ## Example
 
+The following examnple can be run with `npm run demo` and the sources are in the `app` directory
+
 ```js
 const { app } = require('electron');
 const { Shell, Shellmenu } = require('kano-desktop-shell');
