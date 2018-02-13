@@ -64,7 +64,7 @@ const CONTENT_SCHEME = 'my-custom-app';
 const CONTENT_ROOT = path.join(__dirname, './src');
 
 // Custom menu Item added
-ShellItem.addItem('my-item', { label: 'My Menu Item', click() { console.log('My Menu Item') } });
+ShellMenu.addItem('my-item', { label: 'My Menu Item', click() { console.log('My Menu Item') } });
 
 // Create new Shell with custom options
 // Includes automatic window state managment and UWP style titlebar for windows
