@@ -5,13 +5,15 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "electron app/"
+    "demo": "electron app/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "electron": "^1.8.2",
-    "electron-window-state": "^4.1.1"
+    "electron-window-state": "^4.1.1",
+    "mime-types": "^2.1.18",
+    "npm": "^5.7.1"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
