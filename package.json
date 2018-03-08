@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-debug-stream": "^1.0.8",
     "electron": "^1.8.2",
     "electron-window-state": "^4.1.1",
     "mime-types": "^2.1.18",

@@ -70,6 +70,7 @@ ShellMenu.addItem('my-item', { label: 'My Menu Item', click() { console.log('My 
 // Includes automatic window state managment and UWP style titlebar for windows
 // Custom preload as module supported
 const shell = new Shell({
+    name: 'My App',
     root: CONTENT_ROOT,
     scheme: CONTENT_SCHEME,
     // Can provide custom width and height
@@ -81,29 +82,50 @@ const shell = new Shell({
     // Enable UWP style titlebar
     uwpTitlebar: true,
     devMode: false,
-    menuTransform(menu) {
-        const submenu = [ShellMenu.createMenuItem('my-item')];
-        // Can update when dev mode changes
-        if (shell.isDevMode()) {
-            submenu.push(ShellMenu.createMenuItem('separator'));
-            // Can add custom runtime generated menu items
-            submenu.push({ label: 'Dev option' });
-        }
-        // Inject in list of menus
-        menu.splice(1, 0, {
-            label: 'Custom Menu',
-            submenu,
-        });
-        return menu;
+    menu: {
+        transform(menu) {
+            const submenu = [ShellMenu.createMenuItem('my-item')];
+            // Can update when dev mode changes
+            if (shell.isDevMode()) {
+                submenu.push(ShellMenu.createMenuItem('separator'));
+                // Can add custom runtime generated menu items
+                submenu.push({ label: 'Dev option' });
+            }
+            // Inject in list of menus
+            menu.splice(1, 0, {
+                label: 'Custom Menu',
+                submenu,
+            });
+            return menu;
+        },
     },
-    // Set custom window options through this object
     windowOptions: {
         icon: path.join(__dirname, 'res/icon_180.png'),
+    },
+    // Log options allows to customize logging
+    log: {
+        // Default output lod level
+        level: 'debug',
+        // File options. Log files are located in the app.getPath('userData') directory
+        file: {
+            // Options passed down to bunyan 'rotating-file'
+            period: '12h',
+            count: 14,
+        },
+        // options applied once devMode is enabled
+        devMode: {
+            level: 'debug',
+            file: {
+                level: 'debug',
+            },
+        }
     },
 });
 
 app.on('ready', () => {
     shell.createWindow();
+    // Logger can be found here
+    const { log } = shell;
     // The main window is accessible through properties
     console.log(shell.window);
 });
