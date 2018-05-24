@@ -51,6 +51,12 @@ const shell = new Shell({
             count: 7,
         },
     },
+    server: {
+        postProcess(stream, mimeType, url) {
+            console.log(url.path);
+            return stream;
+        }
+    }
 });
 
 app.on('ready', () => {
