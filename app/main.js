@@ -57,7 +57,7 @@ app.on('ready', () => {
     shell.createWindow();
     // Can access logger through the shell object
     const { log } = shell;
-    log.info('My has started');
+    log.info('My app has started');
     // The main window is accessible through properties
     // console.log(shell.window);
 });
