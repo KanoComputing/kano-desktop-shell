@@ -1,5 +1,5 @@
 {
-  "name": "kano-desktop-shell",
+  "name": "@kano/desktop-shell",
   "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
