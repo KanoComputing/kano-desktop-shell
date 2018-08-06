@@ -14,7 +14,8 @@
     "bunyan-debug-stream": "^1.0.8",
     "electron": "^2.0.4",
     "electron-window-state": "^4.1.1",
-    "mime-types": "^2.1.18"
+    "mime-types": "^2.1.18",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
