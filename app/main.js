@@ -56,7 +56,12 @@ const shell = new Shell({
             console.log(url.path);
             return stream;
         }
-    }
+    },
+    version: '1.2.3',
+});
+
+shell.on('window-created', () => {
+    console.log('New window!!!');
 });
 
 app.on('ready', () => {
