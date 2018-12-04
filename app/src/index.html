@@ -9,5 +9,12 @@
 </head>
     <body>
         <h1>Content</h1>
+        <script>
+            fetch('kano-shell://custom/data.json')
+                .then(r => r.json())
+                .then((data) => {
+                    document.write(`<div>${data.value}</div>`);
+                });
+        </script>
     </body>
 </html>

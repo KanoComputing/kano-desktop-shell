@@ -55,7 +55,10 @@ const shell = new Shell({
         postProcess(stream, mimeType, url) {
             console.log(url.path);
             return stream;
-        }
+        },
+        authorities: {
+            custom: path.join(__dirname, 'src/authority'),
+        },
     },
     version: '1.2.3',
 });
