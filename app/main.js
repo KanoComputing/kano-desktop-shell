@@ -15,6 +15,7 @@ const shell = new Shell({
     name: 'My App',
     root: CONTENT_ROOT,
     scheme: CONTENT_SCHEME,
+    userDataDirName: 'my-demo-app',
     // Can provide custom width and height
     width: 1440,
     height: 900,

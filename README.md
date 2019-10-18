@@ -33,8 +33,8 @@ Classic style titlebar (Windows 10)
 
 `Shell`: Use this class to create a new app with a browser window serving content from a local directory
 
-options: 
- - `root`, (required) Root of the local directory you want to serve in the browser window.
+options:
+ - `root`, _(required)_ Root of the local directory you want to serve in the browser window.
  - `scheme`, Scheme that will be used in the server protocol (Default: `shell`)
  - `width`, Width of the main window (Default: `800`).
  - `height`, Height of the main window (Default: `600`).
@@ -44,6 +44,7 @@ options:
  - `devMode`, Enables developer mode (DevTool options) (Default: `false`).
  - `menuTransform`, Function that will receive the shell menu and should return a modified version of it to add custom menu and menu items.
  - `windowOptions`, Any option that will be passed down to electron's `BrowserWindow` constructor.
+ - `userDataDirName`, _(optional)_ Change the name of the directory where user data will be stored. The location is platform-specific. Defaults to the app `name` as specified in `package.json`.
 
 Methods:
 
