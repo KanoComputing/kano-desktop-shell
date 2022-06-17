@@ -12,7 +12,7 @@
   "dependencies": {
     "bunyan": "^1.8.12",
     "bunyan-debug-stream": "^1.0.8",
-    "electron": "^2.0.4",
+    "electron": "^15.5.5",
     "electron-window-state": "^4.1.1",
     "mime-types": "^2.1.18",
     "mkdirp": "^0.5.1"
